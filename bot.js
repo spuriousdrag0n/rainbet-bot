@@ -15,7 +15,7 @@ setTimeout(function () {
   const log   = (msg)  => console.warn(msg);
   const table = (data) => console.table(data);
 
-  const CLAUDE_API_KEY  = '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';
+  const CLAUDE_API_KEY  = 'CLAUDE_API_KEY_HERE';
   const TUNE_EVERY_MINS = 5;
 
   const TIER_NORMAL = 0;
