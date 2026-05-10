@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Rainbet Bot",
+  "version": "1.7",
+  "permissions": ["scripting", "storage", "tabs"],
+  "externally_connectable": {
+    "matches": ["https://rainbet.com/*"]
+  },
+  "host_permissions": [
+    "*://rainbet.com/*",
+    "*://originals.rainbet.com/*",
+    "*://services.rainbet.com/*",
+    "*://api.anthropic.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://rainbet.com/*"],
+      "js": ["bot.js"],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "world": "MAIN"
+    }
+  ]
+}
